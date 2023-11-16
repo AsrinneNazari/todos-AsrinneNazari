@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(181, 156, 233);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#ulist{
+  width:200px;
+  margin-left: 50px;
+  border: 1px solid black; /* ta bort sen */
+}
+
+#list{
+  color: black;
+  border-radius: 5px;
+  list-style-type: none;
+}
+
+#list:hover{
+  background-color: rgb(146, 126, 187);;
+  cursor: pointer;
+}
