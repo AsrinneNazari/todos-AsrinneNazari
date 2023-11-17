@@ -1,53 +1,46 @@
 import "./../scss/style.scss";
-window.onload = () =>{
+/* Lägg in window on load här sist av allt */
+const todoList = ["Gymma", "Laga mat", "Tvätta", "Vattna blommor"];
+const doneToDos = [];
+
+const sectionContList = document.getElementById("sectionContList"); 
+const ulList = document.getElementById("ul-list");
+
+todoList.forEach((task) => {
+const liList = document.createElement("li");
+liList.id ="li-list";
+
+liList.addEventListener("click", () =>{
+    doneToDos.push(task);
+    createHTMLdoneToDos();
+})
+sectionContList.appendChild(ulList);
+ulList.appendChild(liList);
+liList.innerHTML=task;
+
+});
+const headerDone = document.createElement("h3");
+headerDone.innerHTML = "Mina klara todos: ";
+document.body.appendChild(headerDone);
+const sectiondoneToDos = document.getElementById("section-doneToDos");
+const createHTMLdoneToDos = () =>{
+sectiondoneToDos.innerHTML =""; /* tomt i först*/
+sectiondoneToDos.appendChild(headerDone); /* Lägg för sig själv?? Kanske ser bättre ut i browsern */
+
+doneToDos.forEach((tasked, i) => {
+const doneStuffsection = document.createElement("section");
+doneStuffsection.id = "doneStuffsection";
+doneStuffsection.innerHTML = tasked;
+
+doneStuffsection.addEventListener("click", () => {
+    doneToDos.splice(i, 1); /* tar bort en i listan vid klick */
+    createHTMLdoneToDos();
+  });
+  sectiondoneToDos.appendChild(doneStuffsection);
+});
+};
+
+/* Formuläret */
+const form = document.getElementById("input"); /* Hämtar <input>  från forms !*/
 
 
-/* Hittar min header */    
-const mainHeader = document.getElementById("header1");
-
-/* Skapar en lista */
-const divContList = document.createElement("div");
-const ulist = document.createElement("ul");
-const list = document.createElement("li");
-const list1 = document.createElement("li");
-const list2 = document.createElement("li");
-
-divContList.id = "divContList";
-ulist.id = "ulist";
-list.id = "list";
-list1.id = "list1";
-list2.id = "list2";
-
-list.innerHTML = "Laga mat";
-list1.innerHTML = "Städa";
-list2.innerHTML = "Rensa kläder";
-divContList.innerHTML = "Att göra:";
-ulist.appendChild(list);
-ulist.appendChild(list1);
-ulist.appendChild(list2);
-divContList.appendChild(ulist);
-
-document.body.appendChild(divContList);
-}
-
-/* Skapar formulär här plus knapp! */
-let todoForm = document.createElement("form");
-let todoInputForm = document.createElement("input");
-todoInputForm.setAttribute("type", "text");
-todoInputForm.setAttribute("placeholder", "Mer todos!");
-todoForm.appendChild(todoInputForm); 
-document.body.appendChild(todoForm);
-
-let button = document.createElement("button");
-button.innerHTML = "Lägg till!";
-button.id = "buttonclick";
-todoForm.appendChild(button);
-
-/* Redan gjorda todos här! */
-let donetodo = document.createElement("section");
-donetodo.id = "donetodo";
-donetodo.innerHTML = "Done todos:";
-document.body.appendChild(donetodo);
-
-/* function createHTMLforList(){} */
-/* klick grejen här! */
