@@ -17,8 +17,8 @@ liList.addEventListener("click", () =>{
 sectionContList.appendChild(ulList);
 ulList.appendChild(liList);
 liList.innerHTML=task;
-
 });
+
 const headerDone = document.createElement("h3");
 headerDone.innerHTML = "Mina klara todos: ";
 document.body.appendChild(headerDone);
@@ -41,6 +41,11 @@ doneStuffsection.addEventListener("click", () => {
 };
 
 /* Formuläret */
-const form = document.getElementById("input"); /* Hämtar <input>  från forms !*/
+const addNewtoDo = () =>{}
+const btn = document.getElementsById("btn");
 
-
+btn.addEventListener("click", () => {
+    const form = document.getElementById("input").value;
+ 
+    liList.innerHTML = form; /* Lägga in i listan men HUR!? liList hittar den inte*/
+});

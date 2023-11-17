@@ -9,12 +9,24 @@ body{
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+#header1{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#form{
+  text-align: center;
+}
+
 #sectionContList{
-  background-color: gray;
+  text-align: center;
+  width: 50%;
+  background-color: rgb(147, 119, 208);
 }
 
 #ul-list{
-  width:200px;
+  text-align: center;
+  width:auto;
   margin-left: 50px;
   border: 2px solid black;
   border-radius: 4px; /* ta bort sen */
@@ -32,6 +44,7 @@ body{
 }
 
 #section-doneToDos{
-  background-color: rgb(71, 38, 38);
-  border: 1px solid black;
+  text-align: center;
+  width: 50%;
+  background-color: rgb(147, 119, 208);
 }
