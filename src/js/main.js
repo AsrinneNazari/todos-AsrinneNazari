@@ -7,7 +7,7 @@ const sectionContList = document.getElementById("sectionContList");
 const ulList = document.getElementById("ul-list");
 
 todoList.forEach((task) => {
-const liList = document.createElement("li");
+const liList = document.createElement("li");    /* Vart lägger jag i splice? i att det tas bort från listan? */
 liList.id ="li-list";
 
 liList.addEventListener("click", () =>{
@@ -19,18 +19,19 @@ ulList.appendChild(liList);
 liList.innerHTML=task;
 });
 
-const headerDone = document.createElement("h3");
-headerDone.innerHTML = "Mina klara todos: ";
-document.body.appendChild(headerDone);
+
+
+
+
+
 const sectiondoneToDos = document.getElementById("section-doneToDos");
 const createHTMLdoneToDos = () =>{
 sectiondoneToDos.innerHTML =""; /* tomt i först*/
-sectiondoneToDos.appendChild(headerDone); /* Lägg för sig själv?? Kanske ser bättre ut i browsern */
 
 doneToDos.forEach((tasked, i) => {
 const doneStuffsection = document.createElement("section");
 doneStuffsection.id = "doneStuffsection";
-doneStuffsection.innerHTML = tasked;
+doneStuffsection.innerHTML = tasked;    
 
 doneStuffsection.addEventListener("click", () => {
     doneToDos.splice(i, 1); /* tar bort en i listan vid klick */
@@ -41,11 +42,12 @@ doneStuffsection.addEventListener("click", () => {
 };
 
 /* Formuläret */
-const addNewtoDo = () =>{}
-const btn = document.getElementsById("btn");
+const addNewtoDo = () =>{
+const btn = document.getElementById("btn");
+const form = document.getElementById("input").value;
 
-btn.addEventListener("click", () => {
-    const form = document.getElementById("input").value;
+form.addEventListener("submit", (i) => {
  
-    liList.innerHTML = form; /* Lägga in i listan men HUR!? liList hittar den inte*/
+    ulList.innerHTML = [i]; /* Lägga in i listan men HUR!? liList hittar den inte*/
 });
+};

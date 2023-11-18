@@ -1,0 +1,14 @@
+
+
+@mixin fontStyle{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  @mixin primaryColor{
+    background-color: rgb(147, 119, 208);
+  }
+  
+  @mixin boxDecor{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 1px 1px rgb(128, 104, 182);  
+  }
