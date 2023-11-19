@@ -1,4 +1,7 @@
 
+@mixin fontStyleRespo{
+    font-size: 25px;
+  }
 
 @mixin fontStyle{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -12,3 +15,10 @@
     border-radius: 5px 5px 5px 5px;
     box-shadow: 1px 1px rgb(128, 104, 182);  
   }
+
+  @mixin htwt{
+    width: 300px;
+    height: 20px;
+  }
+
+  

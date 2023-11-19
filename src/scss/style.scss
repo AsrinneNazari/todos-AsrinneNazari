@@ -1,26 +1,4 @@
-@use "mixins"; /* Varför funkar det inte? */
-
-@mixin fontStyle{
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-@mixin fontStyleRespo{
-  font-size: 25px;
-}
-
-@mixin primaryColor{
-  background-color: rgb(147, 119, 208);
-}
-
-@mixin boxDecor{
-  border-radius: 5px 5px 5px 5px;
-  box-shadow: 1px 1px rgb(128, 104, 182);  
-}
-
-@mixin htwt{
-  width: 300px;
-  height: 20px;
-}
+@import 'mixins'; /* @use fungerar ej */
 
 *{
   margin: 0;
@@ -65,25 +43,28 @@ body{
 
 #sectionContList{
   text-align: center;
-  width: 30%;
+  width: 50%;
   @include primaryColor;
   @include boxDecor;
 }
 
-#li-list{
+/* Fixa li-list2 innan inlämning! */
+
+#li-list, 
+#li-list2{
   color: black;
   border-radius: 5px;
   list-style-type: none;
 }
 
 #li-list:hover{
-  background-color: rgb(146, 126, 187);;
+  background-color: rgb(146, 126, 187);
   cursor: pointer;
 }
 
 #section-doneToDos{
   text-align: center;
-  width: 30%;
+  width: 50%;
   text-decoration: line-through;
   @include primaryColor;
   @include boxDecor;
