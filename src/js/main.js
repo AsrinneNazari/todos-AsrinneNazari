@@ -2,10 +2,10 @@ import "./../scss/style.scss";
 import { Tasks } from "./tasks";
 window.onload = () =>{ 
 
-const a = new Tasks ("Gymma");
+const a = new Tasks ("Gymma", false);
 const b = new Tasks ("Handla");
 const c = new Tasks ("Tvätta");
-const d = new Tasks ("Dreja");
+const d = new Tasks ("Städa");
 const todoList = [a, b, c, d];
 const doneToDos = [];
 
@@ -18,6 +18,7 @@ todoList.forEach((task, e) => {
 const liList = document.createElement("li");    
 liList.id ="li-list";
 liList.innerText = task.name;
+liList.innerText = task.tasked;
 
 liList.addEventListener("click", () =>{  
     doneToDos.push(task);           
@@ -64,7 +65,8 @@ function addNewtoDo(){
         e.preventDefault();
      
         const newTodo = input.value; 
-        todoList.push(e);
+        const newTask = new Tasks (newTodo);
+        todoList.push(newTask);
         
         const liList2 = document.createElement("li");
         liList2.id = "li-list2";
