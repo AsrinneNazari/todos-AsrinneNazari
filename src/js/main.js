@@ -1,20 +1,29 @@
 import "./../scss/style.scss";
-/* Lägg in window on load här sist av allt */
-const todoList = ["Gymma", "Handla", "Tvätta", "Vattna blommor"];
+import { Tasks } from "./tasks";
+window.onload = () =>{ 
+
+const a = new Tasks ("Gymma");
+const b = new Tasks ("Handla");
+const c = new Tasks ("Tvätta");
+const d = new Tasks ("Dreja");
+const todoList = [a, b, c, d];
 const doneToDos = [];
 
 const sectionContList = document.getElementById("sectionContList"); 
 const ulList = document.getElementById("ul-list");
 
+localStorage.setItem("todo", JSON.stringify(todoList));
+
 todoList.forEach((task, e) => {
 const liList = document.createElement("li");    
 liList.id ="li-list";
+liList.innerText = task.name;
 
 liList.addEventListener("click", () =>{  
-    doneToDos.push(task);               /* Tar ner todo till done todos */
+    doneToDos.push(task);           
     createHTMLdoneToDos();
     
-    todoList.splice(e, 1);  /* Tar bort från todo listan */
+    todoList.splice(e, 1); 
 
     ulList.removeChild(liList); 
 
@@ -23,20 +32,20 @@ liList.addEventListener("click", () =>{
 
 sectionContList.appendChild(ulList);
 ulList.appendChild(liList);
-liList.innerHTML=task;
+liList.innerHTML=task.name;
 });
 
 const sectiondoneToDos = document.getElementById("section-doneToDos");
 const createHTMLdoneToDos = () =>{
-sectiondoneToDos.innerHTML =""; /* tomt i först*/
+sectiondoneToDos.innerHTML =""; 
 
 doneToDos.forEach((tasked, i) => {
 const doneStuffsection = document.createElement("section");
 doneStuffsection.id = "doneStuffsection";
-doneStuffsection.innerHTML = tasked;    
+doneStuffsection.innerHTML = tasked.name;    
 
 doneStuffsection.addEventListener("click", () => {
-    doneToDos.splice(i, 1); /* tar bort en i listan vid klick */
+    doneToDos.splice(i, 1); 
     createHTMLdoneToDos();
   });
   sectiondoneToDos.appendChild(doneStuffsection);
@@ -45,7 +54,7 @@ doneStuffsection.addEventListener("click", () => {
 
 addNewtoDo();
 
-/* Formuläret */
+/* Form */
 function addNewtoDo(){
     
     const form = document.getElementById("form");
@@ -55,16 +64,17 @@ function addNewtoDo(){
         e.preventDefault();
      
         const newTodo = input.value; 
+        todoList.push(e);
+        
         const liList2 = document.createElement("li");
         liList2.id = "li-list2";
         liList2.innerHTML = newTodo;
         ulList.appendChild(liList2);
         createHTMLdoneToDos();
 
+
         input.value = "";
     });
-}
 
-/* Fixa - så att nya todos som hamnar i listan, kan tas bort
-<doneToDos> 
-Kan man göra en gemensam lista av li-list och li-list2? */
+}
+}

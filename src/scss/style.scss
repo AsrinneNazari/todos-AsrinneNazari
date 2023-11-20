@@ -48,7 +48,8 @@ body{
   @include boxDecor;
 }
 
-/* Fixa li-list2 innan inlämning! */
+/* Fixa li-list2 innan inlämning!
+Fixa min-width också */
 
 #li-list, 
 #li-list2{
@@ -70,7 +71,7 @@ body{
   @include boxDecor;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   #pen-icon{
     width: 10%;
   }
