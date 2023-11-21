@@ -2,7 +2,7 @@ import "./../scss/style.scss";
 import { Tasks } from "./tasks";
 window.onload = () =>{ 
 
-const a = new Tasks ("Gymma", false);
+const a = new Tasks ("Gymma");
 const b = new Tasks ("Handla");
 const c = new Tasks ("Tvätta");
 const d = new Tasks ("Städa");
@@ -16,19 +16,17 @@ localStorage.setItem("todo", JSON.stringify(todoList));
 
 todoList.forEach((task, e) => {
 const liList = document.createElement("li");    
-liList.id ="li-list";
+liList.className ="li-list";
 liList.innerText = task.name;
-liList.innerText = task.tasked;
 
 liList.addEventListener("click", () =>{  
     doneToDos.push(task);           
-    createHTMLdoneToDos();
     
     todoList.splice(e, 1); 
 
     ulList.removeChild(liList); 
 
-    createHTMLdoneToDos();
+    createHTMLdoneToDos(); 
 })
 
 sectionContList.appendChild(ulList);
@@ -69,14 +67,12 @@ function addNewtoDo(){
         todoList.push(newTask);
         
         const liList2 = document.createElement("li");
-        liList2.id = "li-list2";
+        liList2.className = "li-list";
         liList2.innerHTML = newTodo;
         ulList.appendChild(liList2);
         createHTMLdoneToDos();
 
-
         input.value = "";
     });
-
 }
 }
