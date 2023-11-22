@@ -1,8 +1,6 @@
 export class Tasks {
     name;
-    tasked;
-    constructor(name, tasked){
+    constructor(name){
         this.name = name;
-        this.tasked = tasked;
     }
 }
