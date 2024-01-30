@@ -7,7 +7,26 @@
     <title>Todo or not todo?</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <h1 id="header1">
+      Min todo lista <img src="img/icon-pen.png" alt="pen" id="pen-icon" />
+    </h1>
+    <form id="form">
+      <input type="text" id="input" placeholder="Skriv in fler här!" />
+      <button id="btn">Lägg till</button>
+    </form>
+    <img src="img/sort-icon.png" id="sort-icon" />
+    <section id="sectionContList">
+      <ul id="ul-list"></ul>
+    </section>
+    <h3 id="header2">
+      Mina klara todos<img
+        src="img/icon-checkmark.png"
+        alt="checkmark"
+        id="check-icon"
+      />
+    </h3>
+    <section id="section-doneToDos"></section>
+
+    <script type="module" src="src/js/main.js"></script>
   </body>
 </html>
