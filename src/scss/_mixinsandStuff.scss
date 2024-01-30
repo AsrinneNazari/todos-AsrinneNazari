@@ -1,0 +1,51 @@
+$bgcolor: rgb(181, 156, 233);
+$hovercolor: rgb(123, 93, 183);
+
+@mixin boxDecor {
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 1px 1px rgb(128, 104, 182);
+  border: 1px solid rgb(128, 104, 182);
+}
+
+@mixin boxRespo($sizew, $sizeh, $sizef) {
+  width: $sizew;
+  height: $sizeh;
+  font-size: $sizef;
+}
+
+@mixin btnAll {
+  background-color: $hovercolor;
+  @include cursor;
+  @include htwt;
+  @include fontStyle;
+}
+
+@mixin cursor {
+  cursor: pointer;
+}
+
+@mixin fontStyle {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+@mixin fontsizeforForm {
+  font-size: 1.2rem;
+}
+
+@mixin htwt {
+  width: 300px;
+  height: 40px;
+}
+
+@mixin hoverEffect {
+  background-color: $hovercolor;
+  cursor: pointer;
+}
+
+@mixin primaryColor {
+  background-color: rgb(147, 119, 208);
+}
+
+@mixin textColor($textColor) {
+  color: $textColor;
+}

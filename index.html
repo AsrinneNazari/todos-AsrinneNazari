@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo or not todo?</title>
+  </head>
+  <body>
+    <h1 id="header1">
+      Min todo lista <img src="img/icon-pen.png" alt="pen" id="pen-icon" />
+    </h1>
+    <form id="form">
+      <input type="text" id="input" placeholder="Skriv in fler här!" />
+      <button id="btn">Lägg till</button>
+    </form>
+    <img src="img/sort-icon.png" id="sort-icon" />
+    <section id="sectionContList">
+      <ul id="ul-list"></ul>
+    </section>
+    <h3 id="header2">
+      Mina klara todos<img
+        src="img/icon-checkmark.png"
+        alt="checkmark"
+        id="check-icon"
+      />
+    </h3>
+    <section id="section-doneToDos"></section>
+
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>
