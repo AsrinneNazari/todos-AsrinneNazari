@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo or not todo?</title>
+    <script type="module" crossorigin src="/assets/index-5bce3258.js"></script>
+    <link rel="stylesheet" href="/assets/index-3c3e6cb7.css">
+  </head>
+  <body>
+    <h1 id="header1">
+      Min todo lista <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADt0lEQVR4nO2bW4gPURzHf+u6hOyDXJa82LY8UEoRJQ88EOXyIMo+8EBIElHSolZKLsXT0i6i8ISkhJQH8aAUHlCKSCSXWOuy+H6bmebM2f/s3M78x/w7n/q+/P/nzP/7PZeZMzPnL2IpPQ3QSqgN6oROQnuh5dCw4mzlTxN0DvoF/Q3Rd3EaZHxBHnNjE/RTwoPr6oJaCnFqmH5QuwTD3YXWQc3QUGgENAXaDj3VyrZW3bFBGP6U+GE+QSsi6gyEtklwmqzO0WNu6OHfQFMT1F8ofiN8gxpNG8wTPTy1O8Vxtir1TxhzlzMM3ym9T2p/oPUJj9UfeuzW74aGG3OZE3rPv4a2iH/274HWJDzmZuV4S405zYFK4Zvd72g8bSM0K8fcY8qsafRh/xaarJXhSa1bkk+HQW551ms34NU4ffW8TpqRwPOAdzXoyGrWNEnCeyRthEbl+G1ZzJomTXiiNkCcRlillI1aRFUNE+F7JN5IuO6W4TRoyOTaEKbCM/CSCp+pLFB+54wB75kxGd4jrBEmQe/EXwQ1ZbefjTzCe+iNsAN6rvzWhozeM5Nn+EplVZ1P7doQ1QjvsV6C4S+JsxAqjDgrvEqo4eOu+vgI7JnyW1ehwYkdG8SGFxvehrfhY9Sz4cWGt+Ft+AhseLHhbXgbPrFjg9jwkjx8mhcZNrzY8Da8DZ/YsUG4v+a0YijuA8yoFxSV4Ds7NXzhDzBJiwSfqp6FRkXUqZnwhM/Q9efqX6Gj0LgK5Wti2HvwPfoHcUzxldITCTYEd1odhsa65Wuq58kM8Y1xJwVPhtx7+0CCDcGtqJwaNRWetIpvbpn23WzopvSeHqUf9ircfkpzfI8+MqTMXOiGBHsxiv++5wk3DvwWx+CdGOWvuWU5DSb2Ua4UPU+4dcQzuStG+ZlK+WMhZUoTnnSIb3R6zDq33fK8DOr7cEsVvk6cFR+Nvhfn7B+HeeIHPKJ8XqrwhPvsPbNXEta959bjnxPGSElOeDr8k4FnOOk21MVKXd5DlC48uSXpru2E0+ehVr8Uw96D/7D6If5tb9zVXT00HzoEvZJg+NL0PFkkvvH90ve+HN4Wc+s51wBd0rvXqctSovDkuPjm57if6Y1wAXohlQN7N0kc8huhIVX0bgRvL90XcebsNGgn9FLCA1OPoIPiXArrq+7aENw56QX6LM45ICzwR+gitBaaUITZPOCQDQvMoX8f2gfNggYU5DFXDkgwNEcAr+X8T27UY7CaYLQ4S1jOec79umLtWKrGPwlMnYazYd0nAAAAAElFTkSuQmCC" alt="pen" id="pen-icon" />
+    </h1>
+    <form id="form">
+      <input type="text" id="input" placeholder="Skriv in fler här!" />
+      <button id="btn">Lägg till</button>
+    </form>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB9klEQVR4nO2Yv0scURDHP9UpCIKlIERUbGzSSQoLO208UUQUW1uLaB+tkj6NNtdfZeNfYC1YifgDxR8khAjRMmoy8mAWHsvu3u3vXXwfGG6ZnZ2Z7759+/YeOBwOx3tmHrgHbvW4ML4AD/qblGXgBRC1F/XlzgjwT4v+B8YS5FjyNS9qr8AaOfPNV/RrRs1LESIawC9fwd9AT0bNS94iVkMKrmTYvOQp4tAqcGMdG3+cCetNWungy3RiT1iJn4GP+uv5zPkgmhGNic/ChJocqfluJW2rr235zPkg7iLuqviMEBFmnUhFH/BoJZxW/7Tle9Q4Pz8iHgkJEBAkwuRIxXqXE8/E+WnqHbwKeBQkRIB33bVeO5dWwFGXAo5j5pUIAZkxGePVJxpfKQFbVoFWSEzLitmsmoAx4FxtNCTmA3ACXETElCYgT8QJKBlxI1Ay4kYgxqv0ssMCdgoMU9ER2OxyFd6o8ghcdGj+LzBepzkwCPyxim8nyCFlCti3Cp8BvXUSsGgVNXtDUwnzSBkC+nU70Cu6myKXlCFgzyr4Exiok4BP1raisYWU+aRIAQ395veKHWSQU4oUsGMVegKG6iRgXBeqqIXsMsFOtRQlYKPLT4nPVRUwrB9rUc1H/WcO49q63uwb1Y5Z3Xo0NlN2Mw6Hw0Fs3gANdXvj6Ags7wAAAABJRU5ErkJggg==" id="sort-icon" />
+    <section id="sectionContList">
+      <ul id="ul-list"></ul>
+    </section>
+    <h3 id="header2">
+      Mina klara todos<img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaklEQVR4nO2aOYtUQRRGPzf0B4iJiqPjCm6oibGIuX9gYjEyMhcVRURcBgTRQFBmVAwMVEzNjA3EbcY9cNdAUVy+y3Chu+1p36u6XTX96h446at76r2ued0M4DiO4ziO0zyG6T36nY7SuXnHScsq+oL+afEqCtkEiX+J9nj1Chq+Cb3i1XE0dBOqxKtjaNgmrEb1+NZNmJNjWGvW0NeoF68eyzCvKWsRHi9+TD+yHevoG4THi3eTT22ERby8JwynHtyC2Mde41emHtwCj0dc/HMMcHzsZ17iB/Izb3HgeXzI4hvoWbqfzo+ICGUjfYu4+Gd0RcjiO+mXlgvdoQuCU+qzCfHxwXd+hP7ocsHbSLMJWePlcf/d48I30d+Pw2ZkipevhaMVF7hO54X19UTi31WcwTRe7uh4zYWuwfYHBYt4OfCCHvtLgQtehs0PClvph8AZ1Em6PHSA1tO+rhfp7NCFyTZkjhduRA5wAWGbYBU/FLB2Gwvp/chBzqPeJmyh7yPXDH7J6cYi+iByoHN0VoW1Zly8spRORA52Er03QQ68GRmvyHfl2O/cJ6a5tsVp39d4ZT3i/yYf77imVXzUaV8HOaE/RQ4sB+N2uod+jrzWU7qsr8VdkOG/Rg5uYdI738kO+u0/A/bTSWSMV3Zh6p8MioxXdtOfKDReGaG/UGi8shcFxyv7UHC8chC28U8w9So+UByC3Z0fSjq5IYdRcLwi7/0h8Y8xgI/9dBxBvfgJNODOd3IUBccL8kPIKRQar8gmnEb3+Ed0Sb7R0iGbcAbt8Q9RSLwim3CAvqK36OK84ziO4ziO4/zLX05qyHZzFOudAAAAAElFTkSuQmCC"
+        alt="checkmark"
+        id="check-icon"
+      />
+    </h3>
+    <section id="section-doneToDos"></section>
+
+    
+  </body>
+</html>
