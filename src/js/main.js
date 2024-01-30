@@ -1,5 +1,5 @@
 import "./../scss/style.scss";
-import { Tasks } from "./tasks";
+import { Tasks } from "./Tasks";
 window.onload = () => {
   const a = new Tasks("Städa");
   const c = new Tasks("Tvätta");
